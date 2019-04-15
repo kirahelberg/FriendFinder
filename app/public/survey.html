@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -173,7 +177,7 @@
 
 <!-- Script to pull answers from the survey -->
 <script type="text/javascript">
-    $("submit").on("click", function(event) {
+    $("#submit").on("click", function(event) {
       event.preventDefault();
   
       // Take values from the survey answers
@@ -190,8 +194,8 @@
     
       //Add responses to a new friend variable
       const newFriend = {
-        name: $("name").val().trim(),
-        photo: $("photo").val().trim(),
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
         scores: [
             q1Val, q2Val, q3Val, q4Val, q5Val, q6Val, q7Val, q8Val, q9Val, q10Val],
         totalScore: q1Val + q2Val + q3Val+ q4Val + q5Val + q6Val + q7Val + q8Val+ q9Val + q10Val
